@@ -12,12 +12,12 @@ Thi picture shows the whole frameowork:
 
 
 ### Directory Structure
-We implment the mapper component in 
+
 ```
 panorama
 │   README.md  
 │   overview.jpg
-└───src  (GNN related stuff: train dataset, GNN model, and DFG generator)
+└───src  
 │   │   dfg_clustering.py (DFG clustering using Scikit Learn spectral clustering)
 │   │   cluster_mapping.py (Graph drawing based cluster mapping)
 │   │   find_cluster_size.py (Find optimal cluster size based on imbalance factor)
@@ -67,7 +67,7 @@ panorama
 We provide an example to map DFG using LISA. 
 
 
-### Map DFG using Panorama
+### Map DFG using Panorama:
 
 
 
