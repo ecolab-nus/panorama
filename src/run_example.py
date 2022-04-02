@@ -8,7 +8,7 @@ import datetime
 ############################################
 
 
-def main(application,no_clusters, no_init,C1_init_, C2_init_, cgra_cluster_r, cgra_cluster_c):
+def main(application,no_clusters,C1_init_, C2_init_, cgra_cluster_r, cgra_cluster_c):
 
   #PANORAMA_HOME = '/home/dmd/Workplace/panorama'	
   #if not 'PANORAMA_HOME' in os.environ:
@@ -30,13 +30,13 @@ def main(application,no_clusters, no_init,C1_init_, C2_init_, cgra_cluster_r, cg
 
   print('\nRunning DFG Clustering\n')
   os.chdir(RESULTS_PWD)
-  os.system('python ../../../../src/dfg_clustering.py ../../../morpher_dfgs/%s/*.xml %s %s %s %s > dfg_clustering_log.txt' % (application,no_clusters, ('precomputed'), no_init, cgra_cluster_r))
-  os.system('dot -Tpdf cdfg.dot -o cdfg_%s_%s_%s.pdf' % (application,no_clusters, no_init))
+  os.system('python ../../../../src/dfg_clustering.py ../../../morpher_dfgs/%s/*.xml %s %s %s > dfg_clustering_log.txt' % (application,no_clusters, ('precomputed'), cgra_cluster_r))
+  os.system('dot -Tpng cdfg.dot -o cdfg_%s_%s.png' % (application,no_clusters))
 
 	
 ##############################################################################################################################################
   print('\nRunning cluster mapping\n')
-  os.system('python ../../../../src/cluster_level_mapping.py %s %s %s %s > cluster_mapping_log.txt' % (C1_init_,C2_init_,cgra_cluster_r,cgra_cluster_c))
+  os.system('python ../../../../src/cluster_mapping.py %s %s %s %s > cluster_mapping_log.txt' % (C1_init_,C2_init_,cgra_cluster_r,cgra_cluster_c))
 
 
 
@@ -58,10 +58,9 @@ def my_mkdir(dir):
 
 if __name__ == '__main__':
     application = sys.argv[1]
-    no_clusters = sys.argv[2]
-    no_init = sys.argv[3]    
-    C1_init = sys.argv[4]
-    C2_init = sys.argv[5]
-    cgra_cluster_r = sys.argv[6]
-    cgra_cluster_c = sys.argv[7]  
-    main(application,no_clusters, no_init,C1_init, C2_init,cgra_cluster_r, cgra_cluster_c)
+    no_clusters = sys.argv[2]  
+    C1_init = sys.argv[3]
+    C2_init = sys.argv[4]
+    cgra_cluster_r = sys.argv[5]
+    cgra_cluster_c = sys.argv[6]  
+    main(application,no_clusters,C1_init, C2_init,cgra_cluster_r, cgra_cluster_c)

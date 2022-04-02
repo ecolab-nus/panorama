@@ -1,0 +1,503 @@
+11
+27
+Number of cluster nodes: 11
+Number of cluster edges: 27
+DFG nodes in each cluster:
+0 23
+1 21
+2 18
+3 18
+4 20
+5 18
+6 18
+7 18
+8 23
+9 18
+10 18
+Number of dfg nodes: 213
+Number of cgra clusters: 16
+Number of dfg nodes per cgra cluster: 13
+Academic license - for non-commercial use only - expires 2022-09-20
+Using license file /home/dmd/Softwares/gurobi_license/gurobi.lic
+Objective 9: <gurobi.LinExpr: -53.0 + 23.0 v0 + 21.0 v1 + 18.0 v2 + 18.0 v3 + 20.0 v4 + 18.0 v5 + 18.0 v6 + 18.0 v7 + 23.0 v8 + 18.0 v9 + 18.0 v10>
+initial constr
+[]
+Node ID: 0
+[4, 0, 5, 0, 7, 0, 3, 0, 9, 0, 2, 0, 10, 0, 6, 0, 8, 0]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Constraint 12: <gurobi.TempConstr: <gurobi.LinExpr: v4 + v0 + v5 + v0 + v7 + v0 + v3 + v0 + v9 + v0 + v2 + v0 + v10 + v0 + v6 + v0 + v8 + v0> <= <gurobi.LinExpr: 3.0 + 100000.0 v0>>
+Constraint 13: <gurobi.TempConstr: <gurobi.LinExpr: v4 + v0 + v5 + v0 + v7 + v0 + v3 + v0 + v9 + v0 + v2 + v0 + v10 + v0 + v6 + v0 + v8 + v0> >= <gurobi.LinExpr: -99985.0 + 100000.0 v0>>
+
+Node ID: 1
+[0, 1, 4, 1, 5, 1, 7, 1, 3, 1, 9, 1, 2, 1, 10, 1, 6, 1, 8, 1]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Constraint 12: <gurobi.TempConstr: <gurobi.LinExpr: v0 + v1 + v4 + v1 + v5 + v1 + v7 + v1 + v3 + v1 + v9 + v1 + v2 + v1 + v10 + v1 + v6 + v1 + v8 + v1> <= <gurobi.LinExpr: 3.0 + 100000.0 v1>>
+Constraint 13: <gurobi.TempConstr: <gurobi.LinExpr: v0 + v1 + v4 + v1 + v5 + v1 + v7 + v1 + v3 + v1 + v9 + v1 + v2 + v1 + v10 + v1 + v6 + v1 + v8 + v1> >= <gurobi.LinExpr: -99983.0 + 100000.0 v1>>
+
+Node ID: 2
+[9, 2]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 3
+[7, 3]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 4
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 5
+[4, 5]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 6
+[10, 6]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 7
+[5, 7]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 8
+[6, 8]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 9
+[3, 9]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 10
+[2, 10]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v2>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v5>, <gurobi.Var v6>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 6 rows, 12 columns and 66 nonzeros
+Model fingerprint: 0x9084cb42
+Variable types: 1 continuous, 11 integer (11 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+05]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e+00, 1e+05]
+Found heuristic solution: objective 53.0000000
+Presolve removed 3 rows and 8 columns
+Presolve time: 0.00s
+Presolved: 3 rows, 4 columns, 11 nonzeros
+Variable types: 0 continuous, 4 integer (2 binary)
+
+Root relaxation: objective 0.000000e+00, 3 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    1   53.00000    0.00000   100%     -    0s
+H    0     0                       8.0000000    0.00000   100%     -    0s
+H    0     0                       6.0000000    0.00000   100%     -    0s
+H    0     0                       3.0000000    0.00000   100%     -    0s
+H    0     0                       1.0000000    0.00000   100%     -    0s
+
+Cutting planes:
+  Gomory: 1
+
+Explored 1 nodes (3 simplex iterations) in 0.00 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 5: 1 3 6 ... 53
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.000000000000e+00, best bound 1.000000000000e+00, gap 0.0000%
+Found a solution at C1,C2  :  3 3
+v0 0
+v1 0
+v2 1
+2
+v3 0
+v4 -0
+v5 1
+5
+v6 1
+6
+v7 0
+v8 -0
+v9 0
+v10 0
+x_ 1
+Obj: 1
+Constraint List: [<gurobi.Constr R0>, <gurobi.Constr R1>, <gurobi.Constr R2>, <gurobi.Constr R3>, <gurobi.Constr R4>, <gurobi.Constr R5>]
+Number of Constraints: 6
+Objective 9: <gurobi.LinExpr: -53.0 + 23.0 v0 + 21.0 v1 + 18.0 v3 + 20.0 v4 + 18.0 v7 + 23.0 v8 + 18.0 v9 + 18.0 v10>
+initial constr
+[]
+Node ID: 0
+[4, 0, 7, 0, 3, 0, 9, 0, 10, 0, 8, 0]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Constraint 12: <gurobi.TempConstr: <gurobi.LinExpr: v4 + v0 + v7 + v0 + v3 + v0 + v9 + v0 + v10 + v0 + v8 + v0> <= <gurobi.LinExpr: 3.0 + 100000.0 v0>>
+Constraint 13: <gurobi.TempConstr: <gurobi.LinExpr: v4 + v0 + v7 + v0 + v3 + v0 + v9 + v0 + v10 + v0 + v8 + v0> >= <gurobi.LinExpr: -99991.0 + 100000.0 v0>>
+
+Node ID: 1
+[0, 1, 4, 1, 7, 1, 3, 1, 9, 1, 10, 1, 8, 1]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Constraint 12: <gurobi.TempConstr: <gurobi.LinExpr: v0 + v1 + v4 + v1 + v7 + v1 + v3 + v1 + v9 + v1 + v10 + v1 + v8 + v1> <= <gurobi.LinExpr: 3.0 + 100000.0 v1>>
+Constraint 13: <gurobi.TempConstr: <gurobi.LinExpr: v0 + v1 + v4 + v1 + v7 + v1 + v3 + v1 + v9 + v1 + v10 + v1 + v8 + v1> >= <gurobi.LinExpr: -99989.0 + 100000.0 v1>>
+
+Node ID: 2
+Node ID: 3
+[7, 3]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 4
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 5
+Node ID: 6
+Node ID: 7
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 8
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 9
+[3, 9]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Node ID: 10
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v3>, <gurobi.Var v4>, <gurobi.Var v7>, <gurobi.Var v8>, <gurobi.Var v9>, <gurobi.Var v10>]
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 6 rows, 9 columns and 48 nonzeros
+Model fingerprint: 0xfbce1102
+Variable types: 1 continuous, 8 integer (8 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+05]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e+00, 1e+05]
+Found heuristic solution: objective 53.0000000
+Presolve removed 0 rows and 3 columns
+Presolve time: 0.00s
+Presolved: 6 rows, 6 columns, 30 nonzeros
+Variable types: 0 continuous, 6 integer (4 binary)
+
+Root relaxation: objective 0.000000e+00, 3 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    1   53.00000    0.00000   100%     -    0s
+H    0     0                       8.0000000    0.00000   100%     -    0s
+H    0     0                       3.0000000    0.00000   100%     -    0s
+*    0     0               0       1.0000000    1.00000  0.00%     -    0s
+
+Explored 1 nodes (4 simplex iterations) in 0.00 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 1 3 8 53 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.000000000000e+00, best bound 1.000000000000e+00, gap 0.0000%
+Found a solution at C1,C2  :  3 3
+v0 -0
+v1 -0
+v3 1
+3
+v4 -0
+v7 1
+7
+v8 -0
+v9 0
+v10 1
+10
+x_ 1
+Obj: 1
+Constraint List: [<gurobi.Constr R0>, <gurobi.Constr R1>, <gurobi.Constr R2>, <gurobi.Constr R3>, <gurobi.Constr R4>, <gurobi.Constr R5>]
+Number of Constraints: 6
+Objective 9: <gurobi.LinExpr: -53.0 + 23.0 v0 + 21.0 v1 + 20.0 v4 + 23.0 v8 + 18.0 v9>
+initial constr
+[]
+Node ID: 0
+[4, 0, 9, 0, 8, 0]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v4>, <gurobi.Var v8>, <gurobi.Var v9>]
+Constraint 12: <gurobi.TempConstr: <gurobi.LinExpr: v4 + v0 + v9 + v0 + v8 + v0> <= <gurobi.LinExpr: 3.0 + 100000.0 v0>>
+Constraint 13: <gurobi.TempConstr: <gurobi.LinExpr: v4 + v0 + v9 + v0 + v8 + v0> >= <gurobi.LinExpr: -99997.0 + 100000.0 v0>>
+
+Node ID: 1
+[0, 1, 4, 1, 9, 1, 8, 1]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v4>, <gurobi.Var v8>, <gurobi.Var v9>]
+Constraint 12: <gurobi.TempConstr: <gurobi.LinExpr: v0 + v1 + v4 + v1 + v9 + v1 + v8 + v1> <= <gurobi.LinExpr: 3.0 + 100000.0 v1>>
+Constraint 13: <gurobi.TempConstr: <gurobi.LinExpr: v0 + v1 + v4 + v1 + v9 + v1 + v8 + v1> >= <gurobi.LinExpr: -99995.0 + 100000.0 v1>>
+
+Node ID: 2
+Node ID: 3
+Node ID: 4
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v4>, <gurobi.Var v8>, <gurobi.Var v9>]
+Node ID: 5
+Node ID: 6
+Node ID: 7
+Node ID: 8
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v4>, <gurobi.Var v8>, <gurobi.Var v9>]
+Node ID: 9
+[]
+[<gurobi.Var v0>, <gurobi.Var v1>, <gurobi.Var v4>, <gurobi.Var v8>, <gurobi.Var v9>]
+Node ID: 10
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 6 rows, 6 columns and 30 nonzeros
+Model fingerprint: 0xf981413a
+Variable types: 1 continuous, 5 integer (5 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+05]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [3e+00, 1e+05]
+Found heuristic solution: objective 53.0000000
+Presolve removed 2 rows and 1 columns
+Presolve time: 0.00s
+Presolved: 4 rows, 5 columns, 18 nonzeros
+Variable types: 0 continuous, 5 integer (3 binary)
+
+Root relaxation: objective 0.000000e+00, 2 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    1   53.00000    0.00000   100%     -    0s
+H    0     0                      13.0000000    0.00000   100%     -    0s
+H    0     0                       7.0000000    0.00000   100%     -    0s
+H    0     0                       6.0000000    0.00000   100%     -    0s
+     0     0     cutoff    0         6.00000    6.00000  0.00%     -    0s
+
+Cutting planes:
+  MIR: 1
+  RLT: 1
+
+Explored 1 nodes (6 simplex iterations) in 0.00 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 6 7 13 53 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000000000000e+00, best bound 6.000000000000e+00, gap 0.0000%
+Found a solution at C1,C2  :  3 3
+v0 -0
+v1 1
+1
+v4 1
+4
+v8 0
+v9 1
+9
+x_ 6
+Obj: 6
+Constraint List: [<gurobi.Constr R0>, <gurobi.Constr R1>, <gurobi.Constr R2>, <gurobi.Constr R3>, <gurobi.Constr R4>, <gurobi.Constr R5>]
+Number of Constraints: 6
+Objective 9: <gurobi.LinExpr: -53.0 + 23.0 v0 + 23.0 v8>
+initial constr
+[]
+Node ID: 0
+[8, 0]
+[<gurobi.Var v0>, <gurobi.Var v8>]
+Node ID: 1
+Node ID: 2
+Node ID: 3
+Node ID: 4
+Node ID: 5
+Node ID: 6
+Node ID: 7
+Node ID: 8
+[]
+[<gurobi.Var v0>, <gurobi.Var v8>]
+Node ID: 9
+Node ID: 10
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 2 rows, 3 columns and 6 nonzeros
+Model fingerprint: 0xf2589cd2
+Variable types: 1 continuous, 2 integer (2 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [5e+01, 5e+01]
+Found heuristic solution: objective 53.0000000
+Presolve removed 2 rows and 3 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds
+Thread count was 1 (of 8 available processors)
+
+Solution count 2: 7 53 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.000000000000e+00, best bound 7.000000000000e+00, gap 0.0000%
+Found a solution at C1,C2  :  3 3
+v0 1
+0
+v8 1
+8
+x_ 7
+Obj: 7
+Constraint List: [<gurobi.Constr R0>, <gurobi.Constr R1>]
+Number of Constraints: 2
+node,row 0 3
+node,row 1 2
+node,row 2 0
+node,row 3 1
+node,row 4 2
+node,row 5 0
+node,row 6 0
+node,row 7 1
+node,row 8 3
+node,row 9 2
+node,row 10 1
+Objective 14: <gurobi.LinExpr: 3.0 v01 + -3.0 v41 + 6.0 v02 + -6.0 v42 + 9.0 v03 + -9.0 v43 + 12.0 v04 + -12.0 v44 + 2.0 v01 + -2.0 v51 + 4.0 v02 + -4.0 v52 + 6.0 v03 + -6.0 v53 + 8.0 v04 + -8.0 v54 + 2.0 v01 + -2.0 v71 + 4.0 v02 + -4.0 v72 + 6.0 v03 + -6.0 v73 + 8.0 v04 + -8.0 v74 + 2.0 v01 + -2.0 v31 + 4.0 v02 + -4.0 v32 + 6.0 v03 + -6.0 v33 + 8.0 v04 + -8.0 v34 + 2.0 v01 + -2.0 v91 + 4.0 v02 + -4.0 v92 + 6.0 v03 + -6.0 v93 + 8.0 v04 + -8.0 v94 + 2.0 v01 + -2.0 v21 + 4.0 v02 + -4.0 v22 + 6.0 v03 + -6.0 v23 + 8.0 v04 + -8.0 v24 + 2.0 v01 + -2.0 v101 + 4.0 v02 + -4.0 v102 + 6.0 v03 + -6.0 v103 + 8.0 v04 + -8.0 v104 + 2.0 v01 + -2.0 v61 + 4.0 v02 + -4.0 v62 + 6.0 v03 + -6.0 v63 + 8.0 v04 + -8.0 v64 + 3.0 v01 + -3.0 v81 + 6.0 v02 + -6.0 v82 + 9.0 v03 + -9.0 v83 + 12.0 v04 + -12.0 v84 + 2.0 v11 + -2.0 v01 + 4.0 v12 + -4.0 v02 + 6.0 v13 + -6.0 v03 + 8.0 v14 + -8.0 v04 + 2.0 v11 + -2.0 v41 + 4.0 v12 + -4.0 v42 + 6.0 v13 + -6.0 v43 + 8.0 v14 + -8.0 v44 + 2.0 v11 + -2.0 v51 + 4.0 v12 + -4.0 v52 + 6.0 v13 + -6.0 v53 + 8.0 v14 + -8.0 v54 + 2.0 v11 + -2.0 v71 + 4.0 v12 + -4.0 v72 + 6.0 v13 + -6.0 v73 + 8.0 v14 + -8.0 v74 + 2.0 v11 + -2.0 v31 + 4.0 v12 + -4.0 v32 + 6.0 v13 + -6.0 v33 + 8.0 v14 + -8.0 v34 + 2.0 v11 + -2.0 v91 + 4.0 v12 + -4.0 v92 + 6.0 v13 + -6.0 v93 + 8.0 v14 + -8.0 v94 + 2.0 v11 + -2.0 v21 + 4.0 v12 + -4.0 v22 + 6.0 v13 + -6.0 v23 + 8.0 v14 + -8.0 v24 + 2.0 v11 + -2.0 v101 + 4.0 v12 + -4.0 v102 + 6.0 v13 + -6.0 v103 + 8.0 v14 + -8.0 v104 + 2.0 v11 + -2.0 v61 + 4.0 v12 + -4.0 v62 + 6.0 v13 + -6.0 v63 + 8.0 v14 + -8.0 v64 + 3.0 v11 + -3.0 v81 + 6.0 v12 + -6.0 v82 + 9.0 v13 + -9.0 v83 + 12.0 v14 + -12.0 v84 + v21 + -1.0 v91 + 2.0 v22 + -2.0 v92 + 3.0 v23 + -3.0 v93 + 4.0 v24 + -4.0 v94 + v31 + -1.0 v71 + 2.0 v32 + -2.0 v72 + 3.0 v33 + -3.0 v73 + 4.0 v34 + -4.0 v74 + v51 + -1.0 v41 + 2.0 v52 + -2.0 v42 + 3.0 v53 + -3.0 v43 + 4.0 v54 + -4.0 v44 + v61 + -1.0 v101 + 2.0 v62 + -2.0 v102 + 3.0 v63 + -3.0 v103 + 4.0 v64 + -4.0 v104 + v71 + -1.0 v51 + 2.0 v72 + -2.0 v52 + 3.0 v73 + -3.0 v53 + 4.0 v74 + -4.0 v54 + v81 + -1.0 v61 + 2.0 v82 + -2.0 v62 + 3.0 v83 + -3.0 v63 + 4.0 v84 + -4.0 v64 + v91 + -1.0 v31 + 2.0 v92 + -2.0 v32 + 3.0 v93 + -3.0 v33 + 4.0 v94 + -4.0 v34 + v101 + -1.0 v21 + 2.0 v102 + -2.0 v22 + 3.0 v103 + -3.0 v23 + 4.0 v104 + -4.0 v24>
+how many cgra clusters one node should map?
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v01 + v02 + v03 + v04> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v11 + v12 + v13 + v14> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v21 + v22 + v23 + v24> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v31 + v32 + v33 + v34> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v41 + v42 + v43 + v44> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v51 + v52 + v53 + v54> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v61 + v62 + v63 + v64> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v71 + v72 + v73 + v74> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v81 + v82 + v83 + v84> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v91 + v92 + v93 + v94> == 2>
+Constraint 15: <gurobi.TempConstr: <gurobi.LinExpr: v101 + v102 + v103 + v104> == 2>
+how many nodes one cgra cluster can have?
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v21 + v51 + v61> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v31 + v71 + v101> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v11 + v41 + v91> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v01 + v81> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v22 + v52 + v62> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v32 + v72 + v102> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v12 + v42 + v92> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v02 + v82> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v23 + v53 + v63> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v33 + v73 + v103> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v13 + v43 + v93> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v03 + v83> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v24 + v54 + v64> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v34 + v74 + v104> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v14 + v44 + v94> >= 1>
+Constraint 16: <gurobi.TempConstr: <gurobi.LinExpr: v04 + v84> >= 1>
+Gurobi Optimizer version 9.1.2 build v9.1.2rc0 (linux64)
+Thread count: 4 physical cores, 8 logical processors, using up to 8 threads
+Optimize a model with 29 rows, 45 columns and 178 nonzeros
+Model fingerprint: 0xbabecdb1
+Variable types: 1 continuous, 44 integer (44 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 8e+01]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+00]
+Found heuristic solution: objective 10.0000000
+Presolve time: 0.00s
+Presolved: 29 rows, 45 columns, 156 nonzeros
+Variable types: 0 continuous, 45 integer (44 binary)
+
+Root relaxation: objective 0.000000e+00, 25 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0    0.00000    0    2   10.00000    0.00000   100%     -    0s
+H    0     0                       6.0000000    0.00000   100%     -    0s
+H    0     0                       1.0000000    0.00000   100%     -    0s
+     0     0    0.00000    0    4    1.00000    0.00000   100%     -    0s
+     0     0    0.00000    0    4    1.00000    0.00000   100%     -    0s
+H    0     0                       0.0000000    0.00000  0.00%     -    0s
+     0     0    0.00000    0    9    0.00000    0.00000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 1
+  MIR: 1
+  GUB cover: 1
+
+Explored 1 nodes (45 simplex iterations) in 0.11 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 4: 0 1 6 10 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+m.status: 2
+Obj: 0
+<gurobi.Var v01 (value -0.0)> -0.0
+<gurobi.Var v02 (value 1.0)> 1.0
+<gurobi.Var v03 (value 1.0)> 1.0
+<gurobi.Var v04 (value -0.0)> -0.0
+<gurobi.Var v11 (value 1.0)> 1.0
+<gurobi.Var v12 (value -0.0)> -0.0
+<gurobi.Var v13 (value -0.0)> -0.0
+<gurobi.Var v14 (value 1.0)> 1.0
+<gurobi.Var v21 (value 1.0)> 1.0
+<gurobi.Var v22 (value 1.0)> 1.0
+<gurobi.Var v23 (value -0.0)> -0.0
+<gurobi.Var v24 (value -0.0)> -0.0
+<gurobi.Var v31 (value 1.0)> 1.0
+<gurobi.Var v32 (value -0.0)> -0.0
+<gurobi.Var v33 (value -0.0)> -0.0
+<gurobi.Var v34 (value 1.0)> 1.0
+<gurobi.Var v41 (value -0.0)> -0.0
+<gurobi.Var v42 (value 1.0)> 1.0
+<gurobi.Var v43 (value 1.0)> 1.0
+<gurobi.Var v44 (value -0.0)> -0.0
+<gurobi.Var v51 (value 1.0)> 1.0
+<gurobi.Var v52 (value -0.0)> -0.0
+<gurobi.Var v53 (value 1.0)> 1.0
+<gurobi.Var v54 (value -0.0)> -0.0
+<gurobi.Var v61 (value 1.0)> 1.0
+<gurobi.Var v62 (value -0.0)> -0.0
+<gurobi.Var v63 (value -0.0)> -0.0
+<gurobi.Var v64 (value 1.0)> 1.0
+<gurobi.Var v71 (value -0.0)> -0.0
+<gurobi.Var v72 (value 1.0)> 1.0
+<gurobi.Var v73 (value -0.0)> -0.0
+<gurobi.Var v74 (value 1.0)> 1.0
+<gurobi.Var v81 (value 1.0)> 1.0
+<gurobi.Var v82 (value -0.0)> -0.0
+<gurobi.Var v83 (value -0.0)> -0.0
+<gurobi.Var v84 (value 1.0)> 1.0
+<gurobi.Var v91 (value -0.0)> -0.0
+<gurobi.Var v92 (value -0.0)> -0.0
+<gurobi.Var v93 (value 1.0)> 1.0
+<gurobi.Var v94 (value 1.0)> 1.0
+<gurobi.Var v101 (value -0.0)> -0.0
+<gurobi.Var v102 (value 1.0)> 1.0
+<gurobi.Var v103 (value 1.0)> 1.0
+<gurobi.Var v104 (value -0.0)> -0.0
+node: (row,col) 0 3 3
+node: (row,col) 1 2 4
+node: (row,col) 2 0 2
+node: (row,col) 3 1 4
+node: (row,col) 4 2 3
+node: (row,col) 5 0 3
+node: (row,col) 6 0 4
+node: (row,col) 7 1 4
+node: (row,col) 8 3 4
+node: (row,col) 9 2 4
+node: (row,col) 10 1 3
+[2, 5, 6]	[2]	[5]	[6]	
+[3]	[7, 10]	[10]	[3, 7]	
+[1]	[4]	[4, 9]	[1, 9]	
+[8]	[0]	[0]	[8]	
+DFG nodes in each cluster:
+0 23
+1 21
+2 18
+3 18
+4 20
+5 18
+6 18
+7 18
+8 23
+9 18
+10 18
+(C1_init,C2_init): 3 3
+DFG cluster to CGRA cluster Mapping:
+Cluster ID	[Rows]	[Cols]
+0	[3, 3]	[1, 2]
+1	[2, 2]	[0, 3]
+2	[0, 0]	[0, 1]
+3	[1, 1]	[0, 3]
+4	[2, 2]	[1, 2]
+5	[0, 0]	[0, 2]
+6	[0, 0]	[0, 3]
+7	[1, 1]	[1, 3]
+8	[3, 3]	[0, 3]
+9	[2, 2]	[2, 3]
+10	[1, 1]	[1, 2]

@@ -48,8 +48,9 @@ def to_edges(l):
         yield last, current
         last = current  
         
-def main(dfg_xml, no_clusters, affinity_, no_init,number_of_cluster_rows_in_cgra):
-    
+def main(dfg_xml, no_clusters, affinity_,number_of_cluster_rows_in_cgra):
+
+
     #Create networkx directed graph to represent data flow graph by passing dfg_xml file
 
     #https://www.datacamp.com/community/tutorials/python-xml-elementtree
@@ -83,12 +84,12 @@ def main(dfg_xml, no_clusters, affinity_, no_init,number_of_cluster_rows_in_cgra
     #Create adjacency matrix of DFG
     adj_mat_dfg = nx.to_numpy_matrix(DFG)
 
-    print('no_clusters affinity no_init')
-    print(no_clusters, affinity_, no_init)
+    print('no_clusters affinity')
+    print(no_clusters, affinity_)
 
     #Spectral clustering from scikit learn
     print('spectral dfg clustering')
-    scdfg = SpectralClustering(int(no_clusters), affinity=str(affinity_), n_init=int(no_init), random_state=0)
+    scdfg = SpectralClustering(int(no_clusters), affinity=str(affinity_), n_init=100, random_state=0)
     #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
     #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
     #scdfg = AgglomerativeClustering(7, affinity='precomputed', linkage='average')
@@ -323,6 +324,5 @@ if __name__ == '__main__':
     dfg_xml = sys.argv[1]
     no_clusters = sys.argv[2]
     affinity_ = sys.argv[3]
-    no_init = sys.argv[4]
-    number_of_cluster_rows_in_cgra = sys.argv[5]
-    main(dfg_xml, no_clusters, affinity_, no_init,number_of_cluster_rows_in_cgra)
+    number_of_cluster_rows_in_cgra = sys.argv[4]
+    main(dfg_xml, no_clusters, affinity_,number_of_cluster_rows_in_cgra)
