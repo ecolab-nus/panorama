@@ -1,0 +1,14 @@
+[submodule "src/panorama_with_morpher/HiMap2_Scripts"]
+	path = src/panorama_with_morpher/HiMap2_Scripts
+	url = https://github.com/Dhananjayadmd/HiMap2_Scripts.git
+[submodule "src/panorama_with_morpher/HiMap2_Cluster_Mapping"]
+	path = src/panorama_with_morpher/HiMap2_Cluster_Mapping
+	url = https://github.com/Dhananjayadmd/HiMap2_Cluster_Mapping.git
+[submodule "src/panorama_with_morpher/Morpher_DFG_Generator"]
+	path = src/panorama_with_morpher/Morpher_DFG_Generator
+	url = https://github.com/ecolab-nus/Morpher_DFG_Generator.git
+	branch = clustering
+[submodule "src/panorama_with_morpher/Morpher_CGRA_Mapper"]
+	path = src/panorama_with_morpher/Morpher_CGRA_Mapper
+	url = https://github.com/ecolab-nus/Morpher_CGRA_Mapper.git
+	branch = hierarchical
