@@ -64,7 +64,7 @@ panorama
   
 
 ## Running Example:
-We provide an example to map DFG using LISA. 
+We provide an example to map DFG using Panorama. 
 
 
 ### Map DFG using Panorama:
