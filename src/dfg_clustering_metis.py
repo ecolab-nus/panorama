@@ -10,6 +10,7 @@ import re
 
 import numpy as np
 import networkx as nx
+import metis
 
 from sklearn.cluster import SpectralClustering
 from sklearn import metrics
@@ -87,25 +88,44 @@ def main(dfg_xml, no_clusters, affinity_):
     print('no_clusters affinity')
     print(no_clusters, affinity_)
 
-    #Spectral clustering from scikit learn
-    print('spectral dfg clustering')
-    scdfg = SpectralClustering(int(no_clusters), affinity=str(affinity_), n_init=100, random_state=0)
-    #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
-    #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
-    #scdfg = AgglomerativeClustering(7, affinity='precomputed', linkage='average')
-    #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
-    #https://ptrckprry.com/course/ssd/lecture/community.html
-    scdfg.fit(adj_mat_dfg)
-    node_list = list(DFG)
-    nodeid_clusterlabel_dict = {}
-    cluster_ids = []
-    cluster_id_node_count = []
-    for i in range(0, DFG.number_of_nodes()):
-        nodeid_clusterlabel_dict[node_list[i]] = scdfg.labels_[i]
-        cluster_ids.append(scdfg.labels_[i])
-    for c in range(0,int(no_clusters)):
-            print(str(c) + ':' + str(cluster_ids.count(c)))
-            cluster_id_node_count.insert(c, cluster_ids.count(c))
+    if True:
+        print('metis dfg clustering')
+        (edgecuts, parts) = metis.part_graph(DFG, int(no_clusters) , objtype = 'vol')#, recursive = False, contig = False)
+    # for i, p in enumerate(parts):
+    #     print(i,p)
+    # for i in parts:
+    #     print(i)
+    # exit()
+        node_list = list(DFG)
+        nodeid_clusterlabel_dict = {}
+        cluster_ids = []
+        cluster_id_node_count = []
+        for i in range(0, DFG.number_of_nodes()):
+            nodeid_clusterlabel_dict[node_list[i]] = parts[i]
+            cluster_ids.append(parts[i])
+        for c in range(0,int(no_clusters)):
+                print(str(c) + ':' + str(cluster_ids.count(c)))
+                cluster_id_node_count.insert(c, cluster_ids.count(c))
+    else:
+        #Spectral clustering from scikit learn
+        print('spectral dfg clustering')
+        scdfg = SpectralClustering(int(no_clusters), affinity=str(affinity_), n_init=100, random_state=0)
+        #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
+        #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
+        #scdfg = AgglomerativeClustering(7, affinity='precomputed', linkage='average')
+        #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
+        #https://ptrckprry.com/course/ssd/lecture/community.html
+        scdfg.fit(adj_mat_dfg)
+        node_list = list(DFG)
+        nodeid_clusterlabel_dict = {}
+        cluster_ids = []
+        cluster_id_node_count = []
+        for i in range(0, DFG.number_of_nodes()):
+            nodeid_clusterlabel_dict[node_list[i]] = scdfg.labels_[i]
+            cluster_ids.append(scdfg.labels_[i])
+        for c in range(0,int(no_clusters)):
+                print(str(c) + ':' + str(cluster_ids.count(c)))
+                cluster_id_node_count.insert(c, cluster_ids.count(c))
 
     #Modify the clustering results 
     #the nodes in recurrence cycle are merged into one cluster

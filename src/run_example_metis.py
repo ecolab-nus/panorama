@@ -30,7 +30,7 @@ def main(application,no_clusters,C1_init_, C2_init_, cgra_cluster_r, cgra_cluste
 
   print('\nRunning DFG Clustering\n')
   os.chdir(RESULTS_PWD)
-  os.system('python ../../../../src/dfg_clustering.py ../../../morpher_dfgs/%s/*.xml %s %s > dfg_clustering_log.txt' % (application,no_clusters, ('precomputed')))
+  os.system('python ../../../../src/dfg_clustering_metis.py ../../../morpher_dfgs/%s/*.xml %s %s > dfg_clustering_log.txt' % (application,no_clusters, ('precomputed')))
   os.system('dot -Tpng cdfg.dot -o cdfg_%s_%s.png' % (application,no_clusters))
 
 	
