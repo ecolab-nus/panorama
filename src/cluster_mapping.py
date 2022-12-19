@@ -20,9 +20,9 @@ from sklearn.cluster._agglomerative import AgglomerativeClustering
 import pydot
 from _ast import If, Assign
 
-import pygraphviz as gz
+#import pygraphviz as gz
 #from pygraphviz import Digraph
-import graphviz
+#import graphviz
 import math
 ############################################
 

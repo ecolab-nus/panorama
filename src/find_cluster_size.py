@@ -11,8 +11,12 @@ import glob
 
 import numpy as np
 import networkx as nx
+import metis
 
 from sklearn.cluster import SpectralClustering
+from sklearn.cluster import DBSCAN
+# from sklearn.cluster import BisectingKMeans
+from sklearn.cluster import KMeans
 from sklearn import metrics
 import matplotlib.pyplot as plt
 from networkx.algorithms.components.connected import connected_components
@@ -56,7 +60,7 @@ def to_edges(l):
         yield last, current
         last = current  
         
-def main(application, min_no_clusters, max_no_clusters):
+def main(application, clus_algo, min_no_clusters, max_no_clusters):
 
     
     dfg_xml = glob.glob('../data/morpher_dfgs/'+application+'/*.xml')[0]
@@ -101,28 +105,114 @@ def main(application, min_no_clusters, max_no_clusters):
     numclusters_imbalance_factor = {}
     # Cluster
     for n in range(int(min_no_clusters),int(max_no_clusters)):
+        if int(n)!=9 and int(n)!=16 :
+            continue
         #print('no_clusters affinity no_init')
         #print(n, affinity_, no_init)
-        print('spectral dfg clustering')
-        #scdfg = SpectralClustering(int(n), affinity=str(affinity_), n_init=int(no_init), random_state=0)
-        scdfg = SpectralClustering(int(n), affinity='precomputed', n_init=100, random_state=0)
-    #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
-    #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
-    #scdfg = AgglomerativeClustering(7, affinity='precomputed', linkage='average')
-    #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
-    #https://ptrckprry.com/course/ssd/lecture/community.html
-        scdfg.fit(adj_mat_dfg)
-        node_list = list(DFG)
-        nodeid_clusterlabel_dict = {}
-        cluster_ids = []
-        cluster_id_node_count = []
-        for i in range(0, DFG.number_of_nodes()):
-            nodeid_clusterlabel_dict[node_list[i]] = scdfg.labels_[i]
-            cluster_ids.append(scdfg.labels_[i])
-        for c in range(0,int(n)):
-            cluster_id_node_count.insert(c, cluster_ids.count(c))
+        if clus_algo == 'spectral':
+            print('spectral dfg clustering')
+            #scdfg = SpectralClustering(int(n), affinity=str(affinity_), n_init=int(no_init), random_state=0)
+            scdfg = SpectralClustering(int(n), affinity='precomputed', n_init=100, random_state=0)
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
+            #scdfg = AgglomerativeClustering(7, affinity='precomputed', linkage='average')
+            #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
+            #https://ptrckprry.com/course/ssd/lecture/community.html
+            scdfg.fit(adj_mat_dfg)
+            node_list = list(DFG)
+            nodeid_clusterlabel_dict = {}
+            cluster_ids = []
+            cluster_id_node_count = []
+            for i in range(0, DFG.number_of_nodes()):
+                nodeid_clusterlabel_dict[node_list[i]] = scdfg.labels_[i]
+                cluster_ids.append(scdfg.labels_[i])
+            for c in range(0,int(n)):
+                cluster_id_node_count.insert(c, cluster_ids.count(c))
+        if clus_algo == 'agglo':
+            print('Agglomerative dfg clustering')
+            #scdfg = SpectralClustering(int(n), affinity=str(affinity_), n_init=int(no_init), random_state=0)
+            # scdfg = SpectralClustering(int(n), affinity='precomputed', n_init=100, random_state=0)
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
+            scdfg = AgglomerativeClustering(int(n), affinity='precomputed', linkage='average')
+            #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
+            #https://ptrckprry.com/course/ssd/lecture/community.html
+            scdfg.fit(adj_mat_dfg)
+            node_list = list(DFG)
+            nodeid_clusterlabel_dict = {}
+            cluster_ids = []
+            cluster_id_node_count = []
+            for i in range(0, DFG.number_of_nodes()):
+                nodeid_clusterlabel_dict[node_list[i]] = scdfg.labels_[i]
+                cluster_ids.append(scdfg.labels_[i])
+            for c in range(0,int(n)):
+                cluster_id_node_count.insert(c, cluster_ids.count(c))
+        if clus_algo == 'dbscan':
+            print('dbscan dfg clustering')
+            #scdfg = SpectralClustering(int(n), affinity=str(affinity_), n_init=int(no_init), random_state=0)
+            # scdfg = SpectralClustering(int(n), affinity='precomputed', n_init=100, random_state=0)
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
+            scdfg = AgglomerativeClustering(int(n), affinity='precomputed', linkage='average')
+            db = DBSCAN(eps=0.3, min_samples=10).fit(adj_mat_dfg)# Number of clusters in labels, ignoring noise if present.
+            n_clusters_ = len(set(db.labels_)) - (1 if -1 in db.labels_ else 0)
+            n_noise_ = list(db.labels_).count(-1)
+            
+            print("Estimated number of clusters: %d" % n_clusters_)
+            print("Estimated number of noise points: %d" % n_noise_)
+            exit()
+            #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
+            #https://ptrckprry.com/course/ssd/lecture/community.html
+            scdfg.fit(adj_mat_dfg)
+            node_list = list(DFG)
+            nodeid_clusterlabel_dict = {}
+            cluster_ids = []
+            cluster_id_node_count = []
+            for i in range(0, DFG.number_of_nodes()):
+                nodeid_clusterlabel_dict[node_list[i]] = db.labels_[i]
+                cluster_ids.append(db.labels_[i])
+            for c in range(0,int(n)):
+                cluster_id_node_count.insert(c, cluster_ids.count(c))
+        elif clus_algo == 'kmeans':
+            print('kmeans dfg clustering')
+            #scdfg = SpectralClustering(int(n), affinity=str(affinity_), n_init=int(no_init), random_state=0)
+            # scdfg = SpectralClustering(int(n), affinity='precomputed', n_init=100, random_state=0)
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)#madgwick
+            #scdfg = SpectralClustering(7, affinity='precomputed', n_init=100)//aes
+            kmeans = KMeans(int(n), random_state=0).fit(nx.to_numpy_array(DFG))
+            #https://stackoverflow.com/questions/46258657/spectral-clustering-a-graph-in-python
+            #https://ptrckprry.com/course/ssd/lecture/community.html
+            # scdfg.fit(adj_mat_dfg)
+            node_list = list(DFG)
+            nodeid_clusterlabel_dict = {}
+            cluster_ids = []
+            cluster_id_node_count = []
+            for i in range(0, DFG.number_of_nodes()):
+                nodeid_clusterlabel_dict[node_list[i]] = kmeans.labels_[i]
+                cluster_ids.append(kmeans.labels_[i])
+            for c in range(0,int(n)):
+                cluster_id_node_count.insert(c, cluster_ids.count(c))         
+        elif clus_algo == 'metis':
+           print('metis dfg clustering')
+           (edgecuts, parts) = metis.part_graph(DFG, int(n) , objtype = 'vol')#, recursive = False, contig = False)
+           # for i, p in enumerate(parts):
+           #     print(i,p)
+           # for i in parts:
+           #     print(i)
+           # exit()
+           node_list = list(DFG)
+           nodeid_clusterlabel_dict = {}
+           cluster_ids = []
+           cluster_id_node_count = []
+           for i in range(0, DFG.number_of_nodes()):
+               nodeid_clusterlabel_dict[node_list[i]] = parts[i]
+               cluster_ids.append(parts[i])
+           for c in range(0,int(n)):
+                   # print(str(c) + ':' + str(cluster_ids.count(c)))
+                   cluster_id_node_count.insert(c, cluster_ids.count(c))
     
         cluster_ids = []
+
     
             
 
@@ -265,6 +355,7 @@ def my_mkdir(dir):
 
 if __name__ == '__main__':
     application = sys.argv[1]
-    min_no_clusters = sys.argv[2]
-    max_no_clusters = sys.argv[3]
-    main(application, min_no_clusters, max_no_clusters)
+    clus_algo = sys.argv[2]
+    min_no_clusters = sys.argv[3]
+    max_no_clusters = sys.argv[4]
+    main(application, clus_algo, min_no_clusters, max_no_clusters)
